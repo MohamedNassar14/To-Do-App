@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Employee Management </title>
+    <link rel="icon"  href="Assets/icon.webp"/>
+    <link rel="stylesheet" href="Scss/all.min.css"/>
+    <link rel="stylesheet" href="Scss/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Scss/style.css"/>
+</head>
+<body>
+    <section class="employees position-relative py-5 min-vh-100">
+        <div class="employees-inputs overflow-hidden min-vh-100 position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-none">
+          <div class="inputs bg-white mx-auto p-3 position-fixed start-50 top-50 translate-middle rounded-3 shadow-lg">
+            <div class="full-name mt-3">
+               <input type="text" class="form-control" placeholder="Full Name..." id="full-name">
+               <p class="error text-danger m-0" id="error"></p>
+            </div>
+            <div class="department mt-3">
+               <input type="text" class="form-control" placeholder="Department..." id="department"/>
+               <p class="error text-danger m-0" id="error"></p>
+            </div>
+            <div class="age mt-3">
+                <input type="text" class="form-control" placeholder="Age..." id="age"/>
+                <p class="error text-danger m-0" id="error"></p>
+            </div>
+            <div class="mobile mt-3">
+               <input type="text" class="form-control" placeholder="Mobile..." id="mobile"/>
+               <p class="error text-danger m-0" id="error"></p>
+            </div>
+            <div class="buttons mt-4">
+               <button class="btn btn-add" id="add-employee"> Add </button>
+               <button class="btn btn-update d-none" id="update-employee"> Update </button>
+               <button class="btn btn-cancel ms-2" id="btn-cancel"> Cancel </button>
+            </div>
+          </div>
+        </div>
+        <div class="head bg-white text-center w-75 mx-auto rounded-3 p-3 shadow-lg">
+           <div class="title">
+              <h1 class="p-3"> Employee Management </h1>
+           </div>
+           <div class="icons d-flex w-25 mx-auto justify-content-center">
+              <div class="icon text-center p-1">
+               <i class="fa-solid fa-folder-plus"></i>
+                Create
+              </div>
+              <div class="icon text-center p-1">
+               <i class="fa-solid fa-book"></i>
+                 Read
+              </div>
+              <div class="icon text-center p-1">
+               <i class="fa-solid fa-file-export"></i>
+                 Update
+              </div>
+              <div class="icon text-center p-1">
+                <i class="fa-solid fa-trash"></i>
+                Delete
+              </div>
+           </div>
+           <div class="button pb-2">
+              <button class="btn btn-add fw-semibold mt-3" id="display-inputs">
+                  <i class="fa-regular fa-square-plus"></i>
+                  Add Employee
+              </button>
+           </div>
+        </div>
+        <div class="search w-75 mx-auto my-3">
+            <input type="text" class="form-control" placeholder="Search..." id="search-input"/>
+        </div>
+        <table class="table table-light table-bordered text-center w-75 mx-auto">
+            <thead>
+               <th> Full Name </th>
+               <th> Department </th>
+               <th> Age </th>
+               <th> Mobile </th>
+               <th> Update </th>
+               <th> Delete </th>
+            </thead>
+            <tbody id="tbody" class="tbody"></tbody>
+        </table>
+        <div class="toast-box" id="toast-box"></div>
+    </section>
+   <script src="Js/app.js"></script>
+</body>
+</html>

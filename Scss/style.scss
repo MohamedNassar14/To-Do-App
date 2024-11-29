@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+$main-color: #2a9d8f;
+$secondary-color: #264653;
+$bg-green-800: #198754;
+$bg-red: #ff0000;
+$bg-yellow-600: #ffc107;
+$text-gray: #8a8888;
+$bg-success: #07bc0c;
+
+body
+{
+  background-color: $secondary-color;
+  font-family: "Poppins", sans-serif;
+}
+@mixin changeStyle($border-color, $color)
+{
+    border-color: $border-color;
+    color: $color;
+    &:hover
+    {
+       border-color: $border-color;
+       color: $color;
+    }
+}
+.title
+{
+    color: $main-color;
+}
+.icon 
+{
+    i 
+    {
+       color: $main-color;
+       font-size: 2rem;
+    }
+}
+.btn-add
+{
+    @include changeStyle($bg-green-800, $bg-green-800);
+}
+table
+{
+    th 
+    {
+        background-color: $main-color !important;
+        color: #fff !important;
+        font-size: 1.10rem;
+    }
+    td 
+    {
+        background-color: #fff;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        i
+        {
+            cursor: pointer;
+        }
+    } 
+    .tbody
+    {
+        border: 1px solid #dfe0e1;
+    }
+}
+@media screen and (max-width: 768px) 
+{
+    table
+    {
+        th 
+        {
+            font-size: 14px;
+        }
+        td 
+        {
+            font-size: 14px;
+        }
+    }
+    .error
+    {
+        font-size: 0.75rem;
+    }
+    .icon
+    {
+        i 
+        {
+            font-size: 1.75rem;
+        }
+    }
+}
+@media screen and (max-width: 600px) 
+{
+    .employees
+    {
+        padding-top: 1rem !important;
+    }
+    .head
+    {
+        padding: 0.25rem !important;
+        h1 
+        {
+            font-size: 1rem;
+            padding: 0.5rem 0 0.25rem 0.5rem !important;
+        }
+        button
+        {
+            font-size: 0.5rem;
+            margin-top: 0.5rem !important;
+        }
+    }
+    table
+    {
+        th 
+        {
+            font-size: 0.5rem;
+        }
+        td 
+        {
+            font-size: 0.5rem;
+        }
+    }
+    .error
+    {
+        font-size: 0.5rem;
+    }
+    .search
+    {
+        .form-control
+        {
+            font-size: 0.75rem;
+        }
+        input
+        {
+            padding: 0.25rem 0.5rem !important;
+        }
+    }
+    .btn
+    {
+        --bs-btn-padding-x: 0.5rem !important;
+        --bs-btn-padding-y: 0.25rem !important;
+    }
+    .icon
+    {
+        font-size: 0.5rem;
+        i 
+        {
+            font-size: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 400px) 
+{ 
+    table
+    {
+        th 
+        {
+            font-size: 7px;
+        }
+        td 
+        {
+            font-size: 7px;
+        }
+    }
+    .search
+    {
+        input
+        {
+            padding: 0.15rem 0.5rem !important;
+        }
+    }
+
+}
+.btn-cancel
+{
+    @include changeStyle($bg-red, $bg-red);
+}
+.btn-update
+{
+    @include changeStyle($bg-yellow-600, $bg-yellow-600);
+}
+.toast-box
+{
+    position: absolute;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 1.25rem 0 1.25rem 3rem;
+    .toaster
+    {
+        width: 20rem;
+        height: 4rem;
+        background-color: #fff;
+        color: $text-gray;
+        display: flex;
+        align-items: center;
+        margin: 0.75rem 0;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3);
+        position: relative;
+        transform: translateX(100%);
+        animation: appear 0.5s linear forwards;
+        i 
+        {
+            margin: 0 0.5rem;
+            font-size: 1.25rem;
+            color: $bg-success;
+        }
+        &::after
+        {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0.30rem;
+            background-color: $bg-success;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            animation: moveLeft 3s linear forwards;
+        }
+    }
+    .invalid
+    {
+        i
+        {
+            color: $bg-red;
+        }
+        &::after
+        {
+            background-color: $bg-red;
+        }
+    }
+}
+@keyframes appear 
+{ 
+    25%
+    {
+        transform: translateX(-15%);
+    }
+    50%
+    {
+       transform: translateX(0);
+    }
+    100%
+    {
+       transform: translateX(-5%);
+    }
+}
+@keyframes moveLeft 
+{ 
+    100%
+    {
+       width: 0;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .toast-box
+    {
+        .toaster
+        {
+           width: 15rem;
+           height: 3.25rem;
+           background-color: #fff;
+           color: #8a8888;
+           display: flex;
+           align-items: center;
+           margin: .5rem 0;
+           padding-top: .5rem;
+           padding-bottom: .5rem;
+           padding-left: .5rem;
+           border-radius: .5rem;
+           font-size: 14px;
+        }
+    }
+    .inputs .form-control
+    {
+        font-size: .75rem !important;
+    }  
+}
+.employees-inputs
+{
+    opacity: 0;
+    animation: change-opacity 0.3s linear forwards;
+}
+@keyframes change-opacity
+{
+    100%
+    {
+        opacity: 100%;
+    }
+}
+.inputs
+{
+    animation: change-width 0.3s linear forwards;
+}
+@keyframes change-width
+{
+    0% 
+    {
+        width: 55%;
+    }
+    50% 
+    {
+        width: 45%;
+    }
+    to
+    {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .inputs
+    {
+        animation: change-width 0.3s linear forwards;
+    }
+    @keyframes change-width
+    {
+        0% 
+        {
+            width: 80%;
+        }
+        50% 
+        {
+            width: 70%;
+        }
+        to
+        {
+            width: 75%;
+        }
+    }
+}
+.form-control:focus
+{
+    box-shadow: none;
+    caret-color: #09c;
+}
+.form-control.is-invalid:focus
+{
+    box-shadow: none; 
+}
+.form-control.is-valid:focus
+{
+    box-shadow: none; 
+}

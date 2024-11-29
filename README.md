@@ -8,3 +8,5 @@ Simple employee management app for implementing crud operations like Add, Read, 
 Html, SCSS, Javascript, Bootstrap
 ## Contributing
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+## Live Preview
+https://employee-manage-crud.vercel.app

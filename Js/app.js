@@ -1,4 +1,4 @@
-const fullName = document.getElementById('full-name');
+const fullName = document.getElementById('name');
 const department = document.getElementById('department');
 const age = document.getElementById('age');
 const mobile = document.getElementById('mobile');
@@ -68,6 +68,7 @@ function displayEmployeeData(fullData)
     {
         employeeData+=
         `<tr>
+            <td>${i+1}</td> 
             <td>${fullData[i].employeeName}</td>
             <td>${fullData[i].employeeDept}</td>
             <td>${fullData[i].employeeAge}</td>
@@ -108,7 +109,7 @@ function searchForGetEmployee(term)
     displayEmployeeData(result);
 }
 //Write a letter to search
-searchInput.addEventListener('keyup', (e)=>{
+searchInput.addEventListener('input', (e)=>{
     searchForGetEmployee(e.target.value);
 });
 //Delete employee from employees data
@@ -163,7 +164,7 @@ update.addEventListener('click', ()=>
 //Validation for full Name
 function validationForName()
 {
-    let validName = /^[A-Z][a-z]+ [A-Z][a-z]+$/;
+    let validName = /^[A-Z][a-z]+$/;
     if(validName.test(fullName.value))
     {
       setValid(fullName, ``);
@@ -173,7 +174,7 @@ function validationForName()
     }
     else
     {
-      setError(fullName, 'First name start with upper and second also');
+      setError(fullName, 'First name start with upper Case');
       fullName.classList.add('is-invalid');
       return false;
     }

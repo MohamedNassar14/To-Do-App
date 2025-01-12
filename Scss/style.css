@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #264653;
   font-family: "Poppins", sans-serif;
@@ -40,25 +45,16 @@ table .tbody {
 }
 
 @media screen and (max-width: 768px) {
-  table th {
+  html {
     font-size: 14px;
-  }
-  table td {
-    font-size: 14px;
-  }
-  .error {
-    font-size: 0.75rem;
-  }
-  .icon i {
-    font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 600px) {
   .employees {
-    padding-top: 1rem !important;
+    padding-top: 1.5rem !important;
   }
   .head {
-    padding: 0.25rem !important;
+    padding: 0.5rem !important;
   }
   .head h1 {
     font-size: 1rem;
@@ -75,7 +71,7 @@ table .tbody {
     font-size: 0.5rem;
   }
   .error {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
   .search .form-control {
     font-size: 0.75rem;
@@ -96,10 +92,10 @@ table .tbody {
 }
 @media screen and (max-width: 400px) {
   table th {
-    font-size: 7px;
+    font-size: 6px;
   }
   table td {
-    font-size: 7px;
+    font-size: 6px;
   }
   .search input {
     padding: 0.15rem 0.5rem !important;
@@ -141,8 +137,7 @@ table .tbody {
   display: flex;
   align-items: center;
   margin: 0.75rem 0;
-  padding-top: 0.5rem;
-  padding-left: 0.5rem;
+  padding-left: 0.25rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3);
   position: relative;
@@ -191,8 +186,8 @@ table .tbody {
 }
 @media screen and (max-width: 500px) {
   .toast-box .toaster {
-    width: 15rem;
-    height: 3.25rem;
+    width: 14rem;
+    height: 3rem;
     background-color: #fff;
     color: #8a8888;
     display: flex;
@@ -200,9 +195,11 @@ table .tbody {
     margin: 0.5rem 0;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
     border-radius: 0.5rem;
     font-size: 14px;
+  }
+  .toast-box .toaster i {
+    font-size: 1rem;
   }
   .inputs .form-control {
     font-size: 0.75rem !important;

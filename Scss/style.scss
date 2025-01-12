@@ -7,22 +7,28 @@ $bg-yellow-600: #ffc107;
 $text-gray: #8a8888;
 $bg-success: #07bc0c;
 
-body
+html 
 {
-  background-color: $secondary-color;
-  font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
-@mixin changeStyle($border-color, $color)
+body 
+{
+    background-color: $secondary-color;
+    font-family: "Poppins", sans-serif;
+}
+@mixin changeStyle($border-color, $color) 
 {
     border-color: $border-color;
     color: $color;
-    &:hover
+
+    &:hover 
     {
-       border-color: $border-color;
-       color: $color;
+        border-color: $border-color;
+        color: $color;
     }
 }
-.title
+.title 
 {
     color: $main-color;
 }
@@ -30,17 +36,17 @@ body
 {
     i 
     {
-       color: $main-color;
-       font-size: 2rem;
+        color: $main-color;
+        font-size: 2rem;
     }
 }
-.btn-add
+.btn-add 
 {
     @include changeStyle($bg-green-800, $bg-green-800);
 }
-table
+table 
 {
-    th 
+    th
     {
         background-color: $main-color !important;
         color: #fff !important;
@@ -51,11 +57,11 @@ table
         background-color: #fff;
         font-size: 1.25rem;
         text-transform: capitalize;
-        i
+        i 
         {
             cursor: pointer;
         }
-    } 
+    }
     .tbody
     {
         border: 1px solid #dfe0e1;
@@ -63,50 +69,33 @@ table
 }
 @media screen and (max-width: 768px) 
 {
-    table
+    html 
     {
-        th 
-        {
-            font-size: 14px;
-        }
-        td 
-        {
-            font-size: 14px;
-        }
-    }
-    .error
-    {
-        font-size: 0.75rem;
-    }
-    .icon
-    {
-        i 
-        {
-            font-size: 1.75rem;
-        }
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 600px) 
 {
-    .employees
+    .employees 
     {
-        padding-top: 1rem !important;
+        padding-top: 1.5rem !important;
     }
-    .head
+    .head 
     {
-        padding: 0.25rem !important;
+        padding: 0.5rem !important;
         h1 
         {
             font-size: 1rem;
             padding: 0.5rem 0 0.25rem 0.5rem !important;
         }
-        button
+        button 
         {
             font-size: 0.5rem;
             margin-top: 0.5rem !important;
         }
     }
-    table
+
+    table 
     {
         th 
         {
@@ -117,27 +106,27 @@ table
             font-size: 0.5rem;
         }
     }
-    .error
+    .error 
     {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
-    .search
+    .search 
     {
-        .form-control
+        .form-control 
         {
             font-size: 0.75rem;
         }
-        input
+        input 
         {
             padding: 0.25rem 0.5rem !important;
         }
     }
-    .btn
+    .btn 
     {
         --bs-btn-padding-x: 0.5rem !important;
         --bs-btn-padding-y: 0.25rem !important;
     }
-    .icon
+    .icon 
     {
         font-size: 0.5rem;
         i 
@@ -146,33 +135,32 @@ table
         }
     }
 }
-@media screen and (max-width: 400px) 
-{ 
-    table
+@media screen and (max-width: 400px) {
+    table 
     {
         th 
         {
-            font-size: 7px;
+            font-size: 6px;
         }
+
         td 
         {
-            font-size: 7px;
+            font-size: 6px;
         }
     }
-    .search
+    .search 
     {
-        input
+        input 
         {
             padding: 0.15rem 0.5rem !important;
         }
     }
-
 }
 .btn-cancel
 {
     @include changeStyle($bg-red, $bg-red);
 }
-.btn-update
+.btn-update 
 {
     @include changeStyle($bg-yellow-600, $bg-yellow-600);
 }
@@ -186,7 +174,7 @@ table
     justify-content: flex-start;
     overflow: hidden;
     padding: 1.25rem 0 1.25rem 3rem;
-    .toaster
+    .toaster 
     {
         width: 20rem;
         height: 4rem;
@@ -195,8 +183,7 @@ table
         display: flex;
         align-items: center;
         margin: 0.75rem 0;
-        padding-top: 0.5rem;
-        padding-left: 0.5rem;
+        padding-left: 0.25rem;
         border-radius: 0.5rem;
         box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3);
         position: relative;
@@ -222,66 +209,67 @@ table
             animation: moveLeft 3s linear forwards;
         }
     }
-    .invalid
+
+    .invalid 
     {
-        i
+        i 
         {
             color: $bg-red;
         }
-        &::after
+        &::after 
         {
             background-color: $bg-red;
         }
     }
 }
-@keyframes appear 
-{ 
-    25%
-    {
+@keyframes appear {
+    25% {
         transform: translateX(-15%);
     }
-    50%
-    {
-       transform: translateX(0);
+
+    50% {
+        transform: translateX(0);
     }
-    100%
-    {
-       transform: translateX(-5%);
+
+    100% {
+        transform: translateX(-5%);
     }
 }
 @keyframes moveLeft 
-{ 
-    100%
-    {
-       width: 0;
+{
+    100% {
+        width: 0;
     }
 }
-@media screen and (max-width: 500px)
+@media screen and (max-width: 500px) 
 {
-    .toast-box
+    .toast-box 
     {
-        .toaster
+        .toaster 
         {
-           width: 15rem;
-           height: 3.25rem;
-           background-color: #fff;
-           color: #8a8888;
-           display: flex;
-           align-items: center;
-           margin: .5rem 0;
-           padding-top: .5rem;
-           padding-bottom: .5rem;
-           padding-left: .5rem;
-           border-radius: .5rem;
-           font-size: 14px;
+            width: 14rem;
+            height: 3rem;
+            background-color: #fff;
+            color: #8a8888;
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 14px;
+            i 
+            {
+                font-size: 1rem;
+            }
         }
     }
-    .inputs .form-control
+    .inputs .form-control 
     {
-        font-size: .75rem !important;
-    }  
+        font-size: 0.75rem !important;
+    }
 }
-.employees-inputs
+.employees-inputs 
 {
     opacity: 0;
     animation: change-opacity 0.3s linear forwards;
@@ -293,11 +281,11 @@ table
         opacity: 100%;
     }
 }
-.inputs
+.inputs 
 {
     animation: change-width 0.3s linear forwards;
 }
-@keyframes change-width
+@keyframes change-width 
 {
     0% 
     {
@@ -307,43 +295,42 @@ table
     {
         width: 45%;
     }
-    to
+    to 
     {
         width: 50%;
     }
 }
-@media screen and (max-width: 600px)
+@media screen and (max-width: 600px) 
 {
-    .inputs
+    .inputs 
     {
         animation: change-width 0.3s linear forwards;
     }
-    @keyframes change-width
+    @keyframes change-width 
     {
-        0% 
-        {
+        0% {
             width: 80%;
         }
-        50% 
-        {
+
+        50% {
             width: 70%;
         }
-        to
-        {
+
+        to {
             width: 75%;
         }
     }
 }
-.form-control:focus
+.form-control:focus 
 {
     box-shadow: none;
     caret-color: #09c;
 }
 .form-control.is-invalid:focus
 {
-    box-shadow: none; 
+    box-shadow: none;
 }
 .form-control.is-valid:focus
 {
-    box-shadow: none; 
+    box-shadow: none;
 }

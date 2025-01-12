@@ -13,8 +13,8 @@
     <section class="employees position-relative py-5 min-vh-100">
         <div class="employees-inputs overflow-hidden min-vh-100 position-absolute top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-none">
           <div class="inputs bg-white mx-auto p-3 position-fixed start-50 top-50 translate-middle rounded-3 shadow-lg">
-            <div class="full-name mt-3">
-               <input type="text" class="form-control" placeholder="Full Name..." id="full-name">
+            <div class="name mt-3">
+               <input type="text" class="form-control" placeholder="Name..." id="name">
                <p class="error text-danger m-0" id="error"></p>
             </div>
             <div class="department mt-3">
@@ -38,7 +38,7 @@
         </div>
         <div class="head bg-white text-center w-75 mx-auto rounded-3 p-3 shadow-lg">
            <div class="title">
-              <h1 class="p-3"> Employee Management </h1>
+              <h1 class="p-3 fw-semibold"> Employee Management </h1>
            </div>
            <div class="icons d-flex w-25 mx-auto justify-content-center">
               <div class="icon text-center p-1">
@@ -70,7 +70,8 @@
         </div>
         <table class="table table-light table-bordered text-center w-75 mx-auto">
             <thead>
-               <th> Full Name </th>
+               <th> Index </th>
+               <th>  Name </th>
                <th> Department </th>
                <th> Age </th>
                <th> Mobile </th>
@@ -81,6 +82,6 @@
         </table>
         <div class="toast-box" id="toast-box"></div>
     </section>
-   <script src="Js/app.js"></script>
+   <script src="Js/app.js"></script> 
 </body>
 </html>

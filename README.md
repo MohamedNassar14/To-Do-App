@@ -1,6 +1,7 @@
 # To Do App
 Simple employee management app for implementing crud operations like Add, Read, Update, delete and search using javascript
 ## Features
+- Validation to ensure that only valid data is entered.
 - Local storage to store employee data locally in the browser.
 - Smooth animations and transitions for an enhanced user experience.
 - Responsive design for optimal viewing across various devices.

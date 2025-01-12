@@ -59,6 +59,7 @@ table .tbody {
   .head h1 {
     font-size: 1rem;
     padding: 0.5rem 0 0.25rem 0.5rem !important;
+    margin: 0 !important;
   }
   .head button {
     font-size: 0.5rem;
@@ -66,9 +67,11 @@ table .tbody {
   }
   table th {
     font-size: 0.5rem;
+    padding: 0.25rem !important;
   }
   table td {
     font-size: 0.5rem;
+    padding: 0.25rem !important;
   }
   .error {
     font-size: 0.75rem;
@@ -92,10 +95,12 @@ table .tbody {
 }
 @media screen and (max-width: 400px) {
   table th {
-    font-size: 6px;
+    font-size: 5px;
+    padding: 0.15rem !important;
   }
   table td {
-    font-size: 6px;
+    font-size: 5px;
+    padding: 0.15rem !important;
   }
   .search input {
     padding: 0.15rem 0.5rem !important;
@@ -186,7 +191,7 @@ table .tbody {
 }
 @media screen and (max-width: 500px) {
   .toast-box .toaster {
-    width: 14rem;
+    width: 15rem;
     height: 3rem;
     background-color: #fff;
     color: #8a8888;
